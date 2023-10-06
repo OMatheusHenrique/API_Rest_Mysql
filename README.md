@@ -1,3 +1,3 @@
-﻿# Api_Rest_Mysql
+#Aplcacao realizada com Express e MySql.
 
- Aplicativo realizado no dia 05-10-2023, conexão de api rest com banco de dados mysql. 
+ Aplicativo realizado no dia 28-09-2023, conexão do mysql usando nodeJs, Express e Nodemon. 
