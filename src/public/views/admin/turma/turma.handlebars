@@ -1,0 +1,31 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Lista de Crimes</h2>
+            <hr>
+            <a href="/rota_turma/turma/add">
+              <button class="btn btn-success">Novo Crime</button></a>
+            {{#each turmas}}
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4><b>ID:</b>{{id_turma}}</h4>
+                    <small><b>Descrição:</b> {{descricao}}</small><br>
+
+                    <a href="/rota_turma/eletar_turma/{{id_turma}}">
+                     <button class="btn btn-success mt-3">
+                        Editar Crime
+                     </button>
+                    </a>
+
+                     <a href="/rota_turma/editar_turma/{{id_turma}}">
+                      <button class="btn btn-danger mt-3">
+                        Deletar Crime
+                      </button>
+                    </a>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

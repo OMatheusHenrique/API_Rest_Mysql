@@ -1,0 +1,57 @@
+<main>
+<div class="p-5 mb-4 bg-light rounded-3">
+<div class="container-fluid py-5">
+<h3> Novo Aluno: </h3>
+<div class="card">
+<div class="card-body">
+<form action="/rota_aluno/aluno/nova" method="POST">
+<label for="matricula">Matricula: </label>
+<input type="text" id="matricula"
+name="matricula" placeholder="Matricula do Detento"
+class="form-control">
+<br>
+<label for="nome">Nome: </label>
+<input type="text" id="nome"
+name="nome" placeholder="Nome do Detento"
+class="form-control">
+<br>
+<label for="turma">Crime:</label>
+<select name="fk_turma" class="custom-select">
+{{#each turmas}}
+<option value="{{id_turma}}">{{descricao}}</option>
+{{else}}
+<option value="0">Nenhum crime registrado</option>
+{{/each}}
+</select>
+
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3>Tempo de Prisão</h3>
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST" action="/rota_aluno/aluno/tempo_matricula">
+                        <!-- Campo oculto para o ID do aluno -->
+                        <input type="hidden" name="id_aluno" value="{{id_aluno}}">
+    
+                        <!-- Campo para o tempo de matrícula -->
+                        <label for="tempo_matricula">Tempo de prisão:</label>
+                        <input type="text" name="tempo_matricula" id="tempo_matricula" required>
+    
+                        <!-- Botão de envio -->
+                        <button type="submit" class="btn btn-success">Salvar Tempo de Matrícula</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<br>
+<br>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
